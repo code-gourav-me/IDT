@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IDT - International Detailed Theory</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background: #0f0f0f;
+    color: #eaeaea;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #141414;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #eaeaea;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #4da3ff;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.main h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.main p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+.main input {
+    width: 60%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+.footer {
+    background: #141414;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="header">
+        <div class="logo">IDT</div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>International Detailed Theory</h1>
+        <p>Search every theory, incident, concept, or idea</p>
+        <input type="text" placeholder="Search anything..." id="searchBox">
+    </div>
+
+    <div class="footer">
+        <p>
+            IDT is created to provide deep, structured, and easy-to-understand explanations
+            of theories, incidents, and concepts from around the world. Our goal is to make
+            knowledge simple, detailed, and accessible for everyone.
+        </p>
+        <p>Mail: gouravgandhwane@gmail.com</p>
+        <p>© 2025 IDT. All rights reserved.</p>
+    </div>
+
+</div>
+
+<script>
+    const searchBox = document.getElementById("searchBox")
+
+function cleanText(text) {
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, "")
+        .trim()
+}
+
+searchBox.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        const query = cleanText(searchBox.value)
+
+        if (
+            query.includes("ww2") ||
+            query.includes("world war 2") ||
+            query.includes("world war ii") ||
+            query.includes("second world war")
+        ) {
+            window.location.href = "articles/world-war-2.html"
+        } else {
+            alert("Only World War II is available right now. More theories coming soon.")
+        }
+    }
+})
+</script>
+</body>
+</html>
